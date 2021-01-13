@@ -4,7 +4,7 @@
     <% if user_signed_in? %>
       <div class="greeting">
         こんにちは、
-        <%= link_to "#{@user.name}", user_path(@user), class: :greeting__link %>
+        <%= link_to "#{@user.name}さん", user_path(@user), class: :greeting__link %>
       </div>
     <% end %>  
 
