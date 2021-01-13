@@ -6,14 +6,10 @@
         こんにちは、
         <%= link_to "#{@user.name}", user_path(@user), class: :greeting__link %>
       </div>
+    <% end %>  
 
       <div class="card__wrapper">
         <%= render partial: 'prototype', collection: @prototypes %>
       </div>
-    <% else %>
-      <div class="card__wrapper">
-        <%= render partial: 'prototype', collection: @prototypes %>
-      </div>  
-    <% end %>  
   </div>
 </main>

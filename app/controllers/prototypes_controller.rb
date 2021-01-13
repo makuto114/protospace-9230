@@ -1,11 +1,9 @@
 class PrototypesController < ApplicationController
 
   def index
-    if user_signed_in?
-      @prototypes = Prototype.where(user_id: current_user.id)
-      @user = User.find(current_user.id)
-    else
       @prototypes = Prototype.all
+    if user_signed_in?  
+      @user = User.find(current_user.id)
     end
   end
 
